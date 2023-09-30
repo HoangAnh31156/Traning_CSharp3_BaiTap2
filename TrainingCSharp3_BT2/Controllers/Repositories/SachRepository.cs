@@ -11,10 +11,12 @@ namespace TrainingCSharp3_BT2.Controllers.Repositories
     internal class SachRepository
     {
         DBContext _DBcontext;
+
         public SachRepository()
         {
             _DBcontext = new DBContext();
         }
+
         public List<Sach> GetSachs(string? input)
         {
             if (input == null)
@@ -23,10 +25,12 @@ namespace TrainingCSharp3_BT2.Controllers.Repositories
             }
             return _DBcontext.Saches.Where(x => x.Ten.Trim().ToLower().Contains(input.ToLower())).ToList();
         }
+
         public List<Nxb> GetNxbs()
         {
             return _DBcontext.Nxbs.ToList();
         }
+
         public bool AddBook(Sach sach)
         {
             if (sach == null)
@@ -36,6 +40,7 @@ namespace TrainingCSharp3_BT2.Controllers.Repositories
             _DBcontext.SaveChanges();
             return true;
         }
+
         public bool UpdateBook(Guid id, Sach sach)
         {
             var temp = _DBcontext.Saches.FirstOrDefault(x => x.Id == id);
