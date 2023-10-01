@@ -11,7 +11,6 @@ namespace TrainingCSharp3_BT2.Controllers.Services
     internal class SachService
     {
         SachRepository _repos;
-
         public SachService()
         {
             _repos = new SachRepository();

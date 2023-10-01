@@ -41,6 +41,7 @@ namespace TrainingCSharp3_BT2.Views
             int stt = 1;
             dgvDSSach.ColumnCount = 5;
             dgvDSSach.AutoSizeColumnsMode  = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvDSSach.Columns[0].Name = "ID";
             dgvDSSach.Columns[0].Visible = false;
             dgvDSSach.Columns[1].Name = "STT";
             dgvDSSach.Columns[2].Name = "Mã sách";
