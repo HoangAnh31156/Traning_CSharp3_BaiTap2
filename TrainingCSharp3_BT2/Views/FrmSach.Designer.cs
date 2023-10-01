@@ -32,7 +32,7 @@
             cmbNXB = new ComboBox();
             txtMa = new TextBox();
             txtTen = new TextBox();
-            rbdHetHang = new RadioButton();
+            rdbHetHang = new RadioButton();
             rdbConHang = new RadioButton();
             label4 = new Label();
             label3 = new Label();
@@ -58,7 +58,7 @@
             groupBox1.Controls.Add(cmbNXB);
             groupBox1.Controls.Add(txtMa);
             groupBox1.Controls.Add(txtTen);
-            groupBox1.Controls.Add(rbdHetHang);
+            groupBox1.Controls.Add(rdbHetHang);
             groupBox1.Controls.Add(rdbConHang);
             groupBox1.Controls.Add(label4);
             groupBox1.Controls.Add(label3);
@@ -93,16 +93,16 @@
             txtTen.Size = new Size(280, 27);
             txtTen.TabIndex = 6;
             // 
-            // rbdHetHang
+            // rdbHetHang
             // 
-            rbdHetHang.AutoSize = true;
-            rbdHetHang.Location = new Point(319, 131);
-            rbdHetHang.Name = "rbdHetHang";
-            rbdHetHang.Size = new Size(91, 24);
-            rbdHetHang.TabIndex = 5;
-            rbdHetHang.TabStop = true;
-            rbdHetHang.Text = "Hết hàng";
-            rbdHetHang.UseVisualStyleBackColor = true;
+            rdbHetHang.AutoSize = true;
+            rdbHetHang.Location = new Point(319, 131);
+            rdbHetHang.Name = "rdbHetHang";
+            rdbHetHang.Size = new Size(91, 24);
+            rdbHetHang.TabIndex = 5;
+            rdbHetHang.TabStop = true;
+            rdbHetHang.Text = "Hết hàng";
+            rdbHetHang.UseVisualStyleBackColor = true;
             // 
             // rdbConHang
             // 
@@ -172,6 +172,7 @@
             btnHienThi.TabIndex = 3;
             btnHienThi.Text = "Hiển thị";
             btnHienThi.UseVisualStyleBackColor = true;
+            btnHienThi.Click += btnHienThi_Click;
             // 
             // btnXoaForm
             // 
@@ -181,6 +182,7 @@
             btnXoaForm.TabIndex = 2;
             btnXoaForm.Text = "Xóa form";
             btnXoaForm.UseVisualStyleBackColor = true;
+            btnXoaForm.Click += btnXoaForm_Click;
             // 
             // btnSua
             // 
@@ -190,6 +192,7 @@
             btnSua.TabIndex = 1;
             btnSua.Text = "Sửa";
             btnSua.UseVisualStyleBackColor = true;
+            btnSua.Click += btnSua_Click;
             // 
             // btnThem
             // 
@@ -199,6 +202,7 @@
             btnThem.TabIndex = 0;
             btnThem.Text = "Thêm";
             btnThem.UseVisualStyleBackColor = true;
+            btnThem.Click += btnThem_Click;
             // 
             // groupBox3
             // 
@@ -223,14 +227,16 @@
             dgvDSSach.RowTemplate.Height = 29;
             dgvDSSach.Size = new Size(788, 134);
             dgvDSSach.TabIndex = 9;
+            dgvDSSach.CellClick += dgvDSSach_CellClick;
             // 
             // txtTimKiem
             // 
             txtTimKiem.Location = new Point(130, 37);
             txtTimKiem.Name = "txtTimKiem";
-            txtTimKiem.PlaceholderText = "Nhập tên để tìm kiếm";
             txtTimKiem.Size = new Size(372, 27);
             txtTimKiem.TabIndex = 8;
+            txtTimKiem.Text = "Nhập tên để tìm kiếm";
+            txtTimKiem.TextChanged += txtTimKiem_TextChanged;
             // 
             // label5
             // 
@@ -268,7 +274,7 @@
         private ComboBox cmbNXB;
         private TextBox txtMa;
         private TextBox txtTen;
-        private RadioButton rbdHetHang;
+        private RadioButton rdbHetHang;
         private RadioButton rdbConHang;
         private Label label4;
         private Label label3;

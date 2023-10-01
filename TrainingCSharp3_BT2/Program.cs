@@ -11,6 +11,7 @@ namespace TrainingCSharp3_BT2
         // 
         //  
         // 
+        // Scaffold-DbContext 'Data Source=DESKTOP-B52SRBN\SQLEXPRESS;Initial Catalog=TRAININGCSHARP3_BTAP2;Integrated Security=True; TrustServerCertificate=true' Microsoft.EntityFrameworkCore.SqlServer -OutputDir DomainClass -context DBContext -Contextdir Context -DataAnnotations -Force
 
         static void Main()
         {

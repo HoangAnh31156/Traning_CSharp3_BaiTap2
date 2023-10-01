@@ -6,33 +6,29 @@ using Microsoft.EntityFrameworkCore;
 
 namespace TrainingCSharp3_BT2.Models.DomainClass;
 
-[Table("Sach")]
+[Table("SACH")]
 public partial class Sach
 {
     [Key]
+    [Column("ID")]
     public Guid Id { get; set; }
 
-    [StringLength(20)]
+    [Column("MA")]
+    [StringLength(5)]
     [Unicode(false)]
     public string? Ma { get; set; }
 
-    [StringLength(30)]
+    [Column("TEN")]
+    [StringLength(50)]
     public string? Ten { get; set; }
 
-    [Column(TypeName = "date")]
-    public DateTime? NgayXuatBan { get; set; }
+    [Column("IDNXB")]
+    public Guid? Idnxb { get; set; }
 
-    public int? SoTrang { get; set; }
+    [Column("TRANGTHAI")]
+    public bool? Trangthai { get; set; }
 
-    [Column(TypeName = "decimal(20, 0)")]
-    public decimal? DonGia { get; set; }
-
-    [Column("IdNXB")]
-    public Guid? IdNxb { get; set; }
-
-    public int? TrangThai { get; set; }
-
-    [ForeignKey("IdNxb")]
+    [ForeignKey("Idnxb")]
     [InverseProperty("Saches")]
-    public virtual Nxb? IdNxbNavigation { get; set; }
+    public virtual Nxb? IdnxbNavigation { get; set; }
 }
